@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background-image: url(/images/bg-pattern.svg);
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#pattern-circles {
+  position: absolute;
+  right: 50%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
