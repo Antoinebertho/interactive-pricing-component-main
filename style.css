@@ -1,17 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 body {
   background-image: url(/images/bg-pattern.svg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -25,13 +28,79 @@ body {
 #pattern-circles {
   position: absolute;
   right: 50%;
+  overflow-x: 0;
+}
+
+.top-page {
+  text-align: center;
+  padding: 70px;
 }
 
 .box {
   font-family: "Manrope", sans-serif;
-  display: flex;
-  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 3px solid red;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
 }
+
+.top-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.input {
+  text-align: center;
+  padding-bottom: 20px;
+};
+
+.middle-box {
+  display: flex;
+}
+
+/* bouton toogle */
+/* toggle in label designing */
+.toggle {
+  position : relative ;
+  display : inline-block;
+  width : 50px;
+  height : 25px;
+  background-color: gray;
+  border-radius: 30px;
+  border: 2px solid gray;
+}
+     
+/* After slide changes */
+.toggle:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  top: 0.5px;
+  left: 1px;
+  transition:  all 0.5s;
+}
+     
+/* Checkbox checked effect */
+.checkbox:checked + .toggle::after {
+  left : 25px;
+}
+     
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+  background-color: green;
+}
+     
+/* Checkbox vanished */
+.checkbox {
+  display : none;
+}
+/* fin bouton toggle */
 
 button {
   width: 150px;
@@ -40,13 +109,4 @@ button {
   border: navy;
   background-color: navy;
   color: aliceblue;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
