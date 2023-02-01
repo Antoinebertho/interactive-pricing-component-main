@@ -1,2 +1,6 @@
 let rangeSlider = document.getElementById("slider");
-let priceRange = document.getElementById("price");
+let priceRange = document.getElementsByClassName("money");
+let pageViews = document.getElementById("page-views");
+let checkbox = document.getElementById("switch");
+
+
