@@ -4,17 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
 }
-
-/* img {
-  max-width: 100%;
-  height: auto;
-} */
 
 body {
   background-image: url(/images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: hsl(230, 100%, 99%);
 }
 
 .container {
@@ -27,55 +24,110 @@ body {
 
 #pattern-circles {
   position: absolute;
-  right: 50%;
-  overflow-x: 0;
+  top: 5%;
+  right: 45%;
 }
 
-.top-page {
+.header {
   text-align: center;
   padding: 70px;
+  z-index: 1;
+  margin-bottom: 50px 0 60px 0;
 }
 
-.box {
+.header h1 {
+  color: hsl(227, 35%, 25%);
+}
+
+.header p {
+  color: hsl(225, 20%, 60%);
+}
+
+.card {
   font-family: "Manrope", sans-serif;
   background-color: #fff;
   border-radius: 10px;
-  border: 3px solid red;
-  width: 400px;
+  width: 600px;
   margin: auto;
   padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.top-box {
+/* haut de la carte */
+.top-card {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  margin: 20px 30px 50px 30px;
+}
+
+.top-card label {
+  color: hsl(225, 20%, 60%);
+}
+
+.top-card .money {
+  color: hsl(227, 35%, 25%);
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .input {
   text-align: center;
   padding-bottom: 20px;
-};
+  width: 100%;
+}
 
-.middle-box {
+#slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background: linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) 50%, hsl(224, 65%, 95%) 50%, hsl(224, 65%, 95%) 100%);
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-image: url(/images/icon-slider.svg);
+  background-color: hsl(174, 86%, 45%);
+  appearance: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  box-shadow: 0px 20px 15px rgba(165, 243, 235, 0.9);
+}
+/* fin du haut de la carte */
+
+/* milieu de la carte  */
+.middle-card {
   display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0 30px 100px;
+}
+
+.middle-card p {
+  color: hsl(225, 20%, 60%);
+  font-size: 15px;
 }
 
 /* bouton toogle */
 /* toggle in label designing */
 .toggle {
-  position : relative ;
-  display : inline-block;
-  width : 50px;
-  height : 25px;
-  background-color: gray;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #d1d6f0;
   border-radius: 30px;
-  border: 2px solid gray;
+  border: 2px solid #d1d6f0;
 }
-     
+
 /* After slide changes */
 .toggle:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 20px;
   height: 20px;
@@ -83,30 +135,69 @@ body {
   background-color: white;
   top: 0.5px;
   left: 1px;
-  transition:  all 0.5s;
+  transition: all 0.5s;
 }
-     
+
 /* Checkbox checked effect */
 .checkbox:checked + .toggle::after {
-  left : 25px;
+  left: 25px;
 }
-     
+
 /* Checkbox checked toggle label bg color */
 .checkbox:checked + .toggle {
-  background-color: green;
+  background-color: hsl(174, 77%, 80%);
+  border: 2px solid hsl(174, 77%, 80%);
 }
-     
+
 /* Checkbox vanished */
 .checkbox {
-  display : none;
+  display: none;
 }
 /* fin bouton toggle */
 
+#discount {
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  font-size: 15px;
+  width: 115px;
+  padding: 5px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+/* fin du milieu de carte */
+
+hr {
+  border: 0.1px solid hsl(225, 20%, 60%);
+}
+
+/* debut du bas de carte */
+.bottom-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+  color: hsl(225, 20%, 60%);
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+li img {
+  padding-right: 10px;
+}
+
 button {
   width: 150px;
-  height: 30px;
+  height: 40px;
   border-radius: 40px;
-  border: navy;
-  background-color: navy;
+  border: hsl(227, 35%, 25%);
+  background-color: hsl(227, 35%, 25%);
   color: aliceblue;
+  cursor: pointer;
 }
